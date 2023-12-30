@@ -2,29 +2,27 @@ const Sequelize = require('sequelize');
 const Mysql = require('mysql2/promise');
 require('dotenv').config();
 
-
 Mysql.createConnection({
-    host: process.env.db_host,
-    port: process.env.db_port,
-    user: process.env.db_user,
-    password: process.env.db_password,
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
 }).then(connection => {
-    connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.db_data};`).then((res) => {
-        console.info("Database Ok");
+    connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME};`).then((res) => {
+        console.info("Database Criada");
     })
 });
 
 const DbConnect = new Sequelize(
-    process.env.db_data,
-    process.env.db_user,
-    process.env.db_password,
+    process.env.DB_NAME,
+    process.env.DB_USER,
+    process.env.DB_PASSWORD,
     {
-        dialect: process.env.db_dialect,
-        host: process.env.db_host
+        dialect: process.env.DB_DIALECT,
+        host: process.env.DB_HOST
     }
 );
 setTimeout(async () => {
-    console.info("Iniciando Tabelas");
     await DbConnect.sync();
     console.info("Tabelas Ok");
 }, 5000);

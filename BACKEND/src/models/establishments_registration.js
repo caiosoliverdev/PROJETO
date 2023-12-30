@@ -6,7 +6,7 @@ module.exports = establishments_registration =  {
         primaryKey: true
     },
     telephone_establishment: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: false
     },
     email_establishment: {

@@ -10,7 +10,7 @@ module.exports = establishments_responsible =  {
         allowNull: false
     },
     responsible_phone: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: false
     },
     responsible_email: {
@@ -18,7 +18,7 @@ module.exports = establishments_responsible =  {
         allowNull: false
     },
     document: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: false
     }
 };

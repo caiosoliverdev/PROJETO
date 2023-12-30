@@ -10,7 +10,7 @@ module.exports = establishments =  {
         allowNull: false
     },
     document: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
     },
     road: {
@@ -18,7 +18,7 @@ module.exports = establishments =  {
         allowNull: false
     },
     number: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
     },
     neighborhood: {
@@ -26,7 +26,7 @@ module.exports = establishments =  {
         allowNull: true
     },
     zip_code: {
-        type: Sequelize.NUMBER,
+        type: Sequelize.DECIMAL,
         allowNull: true
     },
     city: {

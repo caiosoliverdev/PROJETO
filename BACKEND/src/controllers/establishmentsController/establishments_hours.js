@@ -1,134 +1,65 @@
-const {} = require('../models/etiquetas');
-const moment = require('moment-timezone');
+const { EstablishmentsHoursViewModel } = require('../../view/establishmentsView');
 
 module.exports =
 {
-    async Listar(req, res) {
-                  /*
-            #swagger.tags = ['Etiquetas'],
-            #swagger.responses[200] = {description: 'Sucesso.'},
-        */
+    async Get(req, res) {
         try {
-            const Etiquetas = await ModelEtiquetas.findAll();
-
-            if (Etiquetas.length === 0) {
-                return res.json({ "sucesso": false, "mensagem": "Não há registros cadastrados." });
+            const EstablishmentsHours = await EstablishmentsHoursViewModel.findAll();
+            if (EstablishmentsHours.length === 0) {
+                return res.json({ "sucesso": false, "mensagem": "There are no registered records." });
             };
-
-            return res.json({ 'sucesso': true, 'result': Etiquetas });
-
+            return res.json({ 'success': true, 'data': EstablishmentsHours });
         } catch (erro) {
-            return res.json({ "sucesso": false });
-        }
+            return res.json({ "success": false, "erro": JSON.stringify(erro) });
+        };
     },
 
-    async Criar(req, res) {
-                /*
-            #swagger.tags = ['Etiquetas'],
-            #swagger.responses[200] = {description: 'Sucesso.'},
-        */
+    async GetId(req, res) {
         try {
-
-            const { Titulo, Cor } = req.body;
-
-            if (Titulo === "") {
-                return res.json({ "sucesso": false, "mensagem": "Informe o Titulo referente ao registro." });
-            };
-            if (Cor === "") {
-                return res.json({ "sucesso": false, "mensagem": "Informe a Cor referente ao registro." });
-            };
-           
-            function Aliatorio() {
-                return Math.random() * (99 - 10) + 10;
-            };
-
-            function NovoId() {
-                const Data = (new Date().getTime()).toString();
-                var arr = [];
-                for (var i = 6; i < Data.length; i++) {
-                    arr[i] = (Aliatorio() + Data.charCodeAt(i).toString(16)).slice(-4).substring(0, 20);
-                }
-                return arr.join("-").replace('------', '');
-            };
-
-            const Etiquetas = await ModelEtiquetas.create(
-                {
-                    Id: NovoId(),
-                    Titulo: Titulo,
-                    Cor: Cor,
-                    createdAt: moment(new Date()).tz("America/Sao_Paulo").format(),
-                    updatedAt: moment(new Date()).tz("America/Sao_Paulo").format()
-
-                }
-            );
-            return res.json({ 'sucesso': true, 'result': Etiquetas });
-
+            const { id } = req.params;
+            const EstablishmentsHours = await EstablishmentsHoursViewModel.findByPk(id);
+            return res.json({ 'success': true, 'data': EstablishmentsHours });
         } catch (erro) {
-            return res.json({ "sucesso": false });
-        }
+            return res.json({ "success": false, "erro": JSON.stringify(erro) });
+        };
     },
 
-    async Editar(req, res) {
-                /*
-            #swagger.tags = ['Etiquetas'],
-            #swagger.responses[200] = {description: 'Sucesso.'},
-        */
+    async Post(req, res) {
         try {
-
-            const { Titulo, Cor } = req.body;
-
-            if (Titulo === "") {
-                return res.json({ "sucesso": false, "mensagem": "Informe o Titulo referente ao registro." });
-            };
-            if (Cor === "") {
-                return res.json({ "sucesso": false, "mensagem": "Informe a Cor referente ao registro." });
-            };
-           
-
-            const Etiquetas = await ModelEtiquetas.findByPk(req.body.Id);
-            if (Etiquetas) {
-                Etiquetas.Titulo = Titulo;
-                Etiquetas.Cor = Cor;
-                Etiquetas.updatedAt = moment(new Date()).tz("America/Sao_Paulo").format();
-                await Etiquetas.save();
-            }
-
-            return res.json({ 'sucesso': true, 'result': Etiquetas });
-
+            const EstablishmentsHours = await EstablishmentsHoursViewModel.create(req.body);
+            return res.json({ 'success': true, 'data': EstablishmentsHours });
         } catch (erro) {
-            return res.json({ "sucesso": false });
-        }
+            return res.json({ "success": false, "erro": JSON.stringify(erro) });
+        };
     },
 
-    async ListarUm(req, res) {
-                /*
-            #swagger.tags = ['Etiquetas'],
-            #swagger.responses[200] = {description: 'Sucesso.'},
-        */
+    async Put(req, res) {
         try {
-            const Etiquetas = await ModelEtiquetas.findByPk(req.body.Id);
-
-            return res.json({ 'sucesso': true, 'result': Etiquetas });
-
+            const { id } = req.params;
+            const { day_of_the_week, start_time, start_end, active } = req.body;
+            const EstablishmentsHours = await EstablishmentsHoursViewModel.findByPk(id);
+            if (EstablishmentsHours) {
+                EstablishmentsHours.day_of_the_week = day_of_the_week;
+                EstablishmentsHours.start_time = start_time;
+                EstablishmentsHours.start_end = start_end;
+                EstablishmentsHours.active = active;
+                await EstablishmentsHours.save();
+            };
+            return res.json({ 'success': true, 'data': EstablishmentsHours });
         } catch (erro) {
-            return res.json({ "sucesso": false });
-        }
+            return res.json({ "success": false, "erro": JSON.stringify(erro) });
+        };
     },
 
-    async Deletar(req, res) {
-                /*
-            #swagger.tags = ['Etiquetas'],
-            #swagger.responses[200] = {description: 'Sucesso.'},
-        */
+    async Delete(req, res) {
         try {
-
-            const Etiquetas = await ModelEtiquetas.findByPk(req.body.Id);
-            await Etiquetas.destroy();
-            return res.json({ 'sucesso': true, 'result': Etiquetas });
-
+            const { id } = req.params;
+            const EstablishmentsHours = await EstablishmentsHoursViewModel.findByPk(id);
+            await EstablishmentsHours.destroy();
+            return res.json({ 'success': true, 'data': EstablishmentsHours });
         } catch (erro) {
-            return res.json({ "sucesso": false });
+            return res.json({ "success": false, "erro": JSON.stringify(erro) });
         }
     }
 
-}
+};
