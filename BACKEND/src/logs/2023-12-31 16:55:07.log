@@ -1,0 +1,35 @@
+
+Request: GET /establishments at Sun Dec 31 2023 16:55:36 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Response Body:
+{
+	"success": false,
+	"erro": "Falha ao autentificar token de acesso."
+}
+Response: 200 2.807 ms 
+
+Request: GET /establishments at Sun Dec 31 2023 16:55:39 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Response Body:
+{
+	"success": false,
+	"erro": "Falha ao autentificar token de acesso."
+}
+Response: 200 0.514 ms 
+
+Request: GET /establishments at Sun Dec 31 2023 16:55:44 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Response Body:
+{
+	"success": false,
+	"erro": "Falha ao autentificar token de acesso."
+}
+Response: 200 0.313 ms 
+
+Request: GET /establishments at Sun Dec 31 2023 16:57:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+Response Body:
+{
+	"success": false,
+	"erro": "Envie seu token de acesso para prosseguir."
+}
+Response: 200 0.308 ms 
+
+Request: GET /favicon.ico at Sun Dec 31 2023 16:57:31 GMT-0300, IP: ::1, User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36 OPR/105.0.0.0
+Response: 404 4.450 ms 

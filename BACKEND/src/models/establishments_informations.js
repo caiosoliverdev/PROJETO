@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-module.exports = establishments =  {
+module.exports = establishments_informations =  {
     id: {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
@@ -11,7 +11,7 @@ module.exports = establishments =  {
     },
     document: {
         type: Sequelize.DECIMAL,
-        allowNull: true
+        allowNull: false
     },
     road: {
         type: Sequelize.STRING,
@@ -19,22 +19,22 @@ module.exports = establishments =  {
     },
     number: {
         type: Sequelize.DECIMAL,
-        allowNull: true
+        allowNull: false
     },
     neighborhood: {
         type: Sequelize.STRING,
-        allowNull: true
+        allowNull: false
     },
     zip_code: {
         type: Sequelize.DECIMAL,
-        allowNull: true
+        allowNull: false
     },
     city: {
         type: Sequelize.STRING,
-        allowNull: true
+        allowNull: false
     },
     state: {
         type: Sequelize.STRING,
-        allowNull: true
+        allowNull: false
     }
 };

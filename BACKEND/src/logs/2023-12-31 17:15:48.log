@@ -1,0 +1,25 @@
+
+Request: POST /register/establishments at Sun Dec 31 2023 17:15:51 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"ModelEstablishments": {
+		"profile_photo": "d",
+		"company_name": "d"
+	}
+}
+Response Body:
+{
+	"success": false,
+	"erro": "A model ModelEstablishmentsInformations está faltando os seguintes campos ou valores correspondentes. {registration_type,document,road,number,neighborhood,zip_code,city,state}",
+	"field": [
+		"registration_type",
+		"document",
+		"road",
+		"number",
+		"neighborhood",
+		"zip_code",
+		"city",
+		"state"
+	]
+}
+Response: 200 3.694 ms 
