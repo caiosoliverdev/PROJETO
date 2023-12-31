@@ -17,9 +17,9 @@ module.exports =
             //#region VALIDA MODELS
             if ((await validationEstablishments(ModelEstablishments)).erro) {
                 if((await validationEstablishments(ModelEstablishments)).field){
-                    return res.json({ "sucesso": false, "erro": (await validationEstablishments(ModelEstablishments)).message, field:(await validationEstablishments(ModelEstablishments)).field });
+                    return res.json({ "success": false, "erro": (await validationEstablishments(ModelEstablishments)).message, field:(await validationEstablishments(ModelEstablishments)).field });
                 }else{
-                    return res.json({ "sucesso": false, "erro": (await validationEstablishments(ModelEstablishments)).message });
+                    return res.json({ "success": false, "erro": (await validationEstablishments(ModelEstablishments)).message });
                 };
             };
             //#endregion
@@ -31,10 +31,10 @@ module.exports =
                 where: [{ email_establishment: ModelEstablishmentsRegistration.email_establishment }]
             });
             if (GetEstablishments.length > 0) {
-                return res.json({ "sucesso": false, "erro": "Este CNPJ já esta cadastrado." });
+                return res.json({ "success": false, "erro": "Este CNPJ já esta cadastrado." });
             };
             if (GetEstablishmentsRegistration.length > 0) {
-                return res.json({ "sucesso": false, "erro": "Este EMAIL já esta cadastrado." });
+                return res.json({ "success": false, "erro": "Este EMAIL já esta cadastrado." });
             };
             const Establishments = await EstablishmentsViewModel.create(ModelEstablishments);
             await EstablishmentsRegistrationViewModel.create({
