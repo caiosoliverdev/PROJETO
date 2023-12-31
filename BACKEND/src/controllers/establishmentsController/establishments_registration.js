@@ -1,54 +1,50 @@
-const { EstablishmentsViewModel } = require('../../view/establishmentsView');
-const moment = require('moment-timezone');
+const { EstablishmentsRegistrationViewModel } = require('../../view/establishmentsView');
 
 module.exports =
 {
     async Get(req, res) {
         try {
-            const Establishments = await EstablishmentsViewModel.findAll();
-            if (Establishments.length === 0) {
+            const EstablishmentsRegistration = await EstablishmentsRegistrationViewModel.findAll();
+            if (EstablishmentsRegistration.length === 0) {
                 return res.json({ "sucesso": false, "mensagem": "There are no registered records." });
             };
-            return res.json({ 'success': true, 'data': Establishments });
+            return res.json({ 'success': true, 'data': EstablishmentsRegistration });
         } catch (erro) {
             return res.json({ "success": false, "erro": JSON.stringify(erro) });
         };
     },
 
     async GetId(req, res) {
-
         try {
             const { id } = req.params;
-            const Establishments = await EstablishmentsViewModel.findByPk(id);
-            return res.json({ 'success': true, 'data': Establishments });
+            const EstablishmentsRegistration = await EstablishmentsRegistrationViewModel.findByPk(id);
+            return res.json({ 'success': true, 'data': EstablishmentsRegistration });
         } catch (erro) {
             return res.json({ "success": false, "erro": JSON.stringify(erro) });
         };
     },
 
-    async Post(req, res) {
-        try {
-            const Establishments = await EstablishmentsViewModel.create(req.body);
-            return res.json({ 'success': true, 'data': Establishments });
-        } catch (erro) {
-            return res.json({ "success": false, "erro": JSON.stringify(erro) });
-        };
-    },
+    // async Post(req, res) {
+    //     try {
+    //         const EstablishmentsRegistration = await EstablishmentsRegistrationViewModel.create(req.body);
+    //         return res.json({ 'success': true, 'data': EstablishmentsRegistration });
+    //     } catch (erro) {
+    //         return res.json({ "success": false, "erro": JSON.stringify(erro) });
+    //     };
+    // },
 
     async Put(req, res) {
         try {
             const { id } = req.params;
-            const { profile_photo, photo_cover, company_name, slogan, description } = req.body;
-            const Establishments = await EstablishmentsViewModel.findByPk(id);
-            if (Establishments) {
-                Establishments.profile_photo = profile_photo;
-                Establishments.photo_cover = photo_cover;
-                Establishments.company_name = company_name;
-                Establishments.slogan = slogan;
-                Establishments.description = description;
-                await Establishments.save();
+            const { telephone_establishment, email_establishment, password } = req.body;
+            const EstablishmentsRegistration = await EstablishmentsRegistrationViewModel.findByPk(id);
+            if (EstablishmentsRegistration) {
+                EstablishmentsRegistration.telephone_establishment = telephone_establishment;
+                EstablishmentsRegistration.email_establishment = email_establishment;
+                EstablishmentsRegistration.password = password;
+                await EstablishmentsRegistration.save();
             };
-            return res.json({ 'success': true, 'data': Establishments });
+            return res.json({ 'success': true, 'data': EstablishmentsRegistration });
         } catch (erro) {
             return res.json({ "success": false, "erro": JSON.stringify(erro) });
         };
@@ -57,9 +53,9 @@ module.exports =
     async Delete(req, res) {
         try {
             const { id } = req.params;
-            const Establishments = await EstablishmentsViewModel.findByPk(id);
-            await Establishments.destroy();
-            return res.json({ 'success': true, 'data': Establishments });
+            const EstablishmentsRegistration = await EstablishmentsRegistrationViewModel.findByPk(id);
+            await EstablishmentsRegistration.destroy();
+            return res.json({ 'success': true, 'data': EstablishmentsRegistration });
         } catch (erro) {
             return res.json({ "success": false, "erro": JSON.stringify(erro) });
         }
