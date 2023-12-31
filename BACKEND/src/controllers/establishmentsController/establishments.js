@@ -6,7 +6,7 @@ module.exports =
         try {
             const Establishments = await EstablishmentsViewModel.findAll();
             if (Establishments.length === 0) {
-                return res.json({ "sucesso": false, "mensagem": "There are no registered records." });
+                return res.json({ "sucesso": false, "erro": "There are no registered records." });
             };
             return res.json({ 'success': true, 'data': Establishments });
         } catch (erro) {
@@ -24,14 +24,14 @@ module.exports =
         };
     },
 
-    async Post(req, res) {
-        try {
-            const Establishments = await EstablishmentsViewModel.create(req.body);
-            return res.json({ 'success': true, 'data': Establishments });
-        } catch (erro) {
-            return res.json({ "success": false, "erro": JSON.stringify(erro) });
-        };
-    },
+    // async Post(req, res) {
+    //     try {
+    //         const Establishments = await EstablishmentsViewModel.create(req.body);
+    //         return res.json({ 'success': true, 'data': Establishments });
+    //     } catch (erro) {
+    //         return res.json({ "success": false, "erro": JSON.stringify(erro) });
+    //     };
+    // },
 
     async Put(req, res) {
         try {
