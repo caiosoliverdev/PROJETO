@@ -1,0 +1,21 @@
+
+Request: POST /auth at Sat Jan 06 2024 15:23:13 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"email": "",
+	"password": ""
+}
+Response Body:
+{
+	"success": false,
+	"erro": "Esse email não esta cadastrado"
+}
+Response: 200 24.690 ms 
+
+Request: POST /register/establishments at Sat Jan 06 2024 15:24:51 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Response Body:
+{
+	"success": false,
+	"erro": "Envie seu token de acesso para prosseguir."
+}
+Response: 200 1.053 ms 

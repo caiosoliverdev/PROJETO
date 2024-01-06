@@ -1,0 +1,26 @@
+
+Request: POST /auth at Sat Jan 06 2024 15:36:11 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"email": "teste@teste.com",
+	"password": "admin"
+}
+Response Body:
+{
+	"success": false,
+	"erro": "Esse email não esta cadastrado"
+}
+Response: 200 20.964 ms 
+
+Request: POST /auth at Sat Jan 06 2024 15:36:15 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"email": "teste@teste.com",
+	"password": "admin"
+}
+Response Body:
+{
+	"success": false,
+	"erro": "Esse email não esta cadastrado"
+}
+Response: 200 2.455 ms 

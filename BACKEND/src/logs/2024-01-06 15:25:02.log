@@ -1,0 +1,302 @@
+
+Request: POST /register/establishments at Sat Jan 06 2024 15:25:07 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Response Body:
+{
+	"success": false,
+	"erro": "A Model ModelEstablishments está faltando."
+}
+Response: 200 6.534 ms 
+
+Request: POST /register/establishments at Sat Jan 06 2024 15:25:25 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"ModelEstablishments": {}
+}
+Response Body:
+{
+	"success": false,
+	"erro": "A model ModelEstablishments está faltando os seguintes campos ou valores correspondentes. {profile_photo,company_name}",
+	"field": [
+		"profile_photo",
+		"company_name"
+	]
+}
+Response: 200 1.256 ms 
+
+Request: POST /register/establishments at Sat Jan 06 2024 15:25:47 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"ModelEstablishments": {
+		"profile_photo": "teste",
+		"company_name": "Fanta"
+	}
+}
+Response Body:
+{
+	"success": false,
+	"erro": "A Model ModelEstablishmentsInformations está faltando."
+}
+Response: 200 0.580 ms 
+
+Request: POST /register/establishments at Sat Jan 06 2024 15:25:56 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"ModelEstablishments": {
+		"profile_photo": "teste",
+		"company_name": "Fanta"
+	},
+	"ModelEstablishmentsInformations": {}
+}
+Response Body:
+{
+	"success": false,
+	"erro": "A model ModelEstablishmentsInformations está faltando os seguintes campos ou valores correspondentes. {registration_type,document,road,number,neighborhood,zip_code,city,state}",
+	"field": [
+		"registration_type",
+		"document",
+		"road",
+		"number",
+		"neighborhood",
+		"zip_code",
+		"city",
+		"state"
+	]
+}
+Response: 200 0.469 ms 
+
+Request: POST /register/establishments at Sat Jan 06 2024 15:27:10 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"ModelEstablishments": {
+		"profile_photo": "teste",
+		"company_name": "Fanta"
+	},
+	"ModelEstablishmentsInformations": {
+		"registration_type": "fisica",
+		"document": "123456789",
+		"road": "Rua teste",
+		"number": "123",
+		"neighborhood": "bairro teste",
+		"zip_code": "37950000",
+		"city": "Sao Sebastiao do Paraiso",
+		"state": "MG"
+	}
+}
+Response Body:
+{
+	"success": false,
+	"erro": "A Model ModelEstablishmentsRegistration está faltando."
+}
+Response: 200 0.616 ms 
+
+Request: POST /register/establishments at Sat Jan 06 2024 15:27:19 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"ModelEstablishments": {
+		"profile_photo": "teste",
+		"company_name": "Fanta"
+	},
+	"ModelEstablishmentsInformations": {
+		"registration_type": "fisica",
+		"document": "123456789",
+		"road": "Rua teste",
+		"number": "123",
+		"neighborhood": "bairro teste",
+		"zip_code": "37950000",
+		"city": "Sao Sebastiao do Paraiso",
+		"state": "MG"
+	},
+	"ModelEstablishmentsRegistration": {}
+}
+Response Body:
+{
+	"success": false,
+	"erro": "A model ModelEstablishmentsRegistration está faltando os seguintes campos ou valores correspondentes. {telephone_establishment,email_establishment,password,active}",
+	"field": [
+		"telephone_establishment",
+		"email_establishment",
+		"password",
+		"active"
+	]
+}
+Response: 200 0.388 ms 
+
+Request: POST /register/establishments at Sat Jan 06 2024 15:28:02 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"ModelEstablishments": {
+		"profile_photo": "teste",
+		"company_name": "Fanta"
+	},
+	"ModelEstablishmentsInformations": {
+		"registration_type": "fisica",
+		"document": "123456789",
+		"road": "Rua teste",
+		"number": "123",
+		"neighborhood": "bairro teste",
+		"zip_code": "37950000",
+		"city": "Sao Sebastiao do Paraiso",
+		"state": "MG"
+	},
+	"ModelEstablishmentsRegistration": {
+		"telephone_establishment": "35900000000",
+		"email_establishment": "teste@teste.com",
+		"password": "admin",
+		"active": true
+	}
+}
+Response Body:
+{
+	"success": false,
+	"erro": "A Model ModelEstablishmentsResponsible está faltando."
+}
+Response: 200 0.561 ms 
+
+Request: POST /register/establishments at Sat Jan 06 2024 15:28:19 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"ModelEstablishments": {
+		"profile_photo": "teste",
+		"company_name": "Fanta"
+	},
+	"ModelEstablishmentsInformations": {
+		"registration_type": "fisica",
+		"document": "123456789",
+		"road": "Rua teste",
+		"number": "123",
+		"neighborhood": "bairro teste",
+		"zip_code": "37950000",
+		"city": "Sao Sebastiao do Paraiso",
+		"state": "MG"
+	},
+	"ModelEstablishmentsRegistration": {
+		"telephone_establishment": "35900000000",
+		"email_establishment": "teste@teste.com",
+		"password": "admin",
+		"active": true
+	},
+	"ModelEstablishmentsResponsible": {}
+}
+Response Body:
+{
+	"success": false,
+	"erro": "A model ModelEstablishmentsResponsible está faltando os seguintes campos ou valores correspondentes. {responsible_name,responsible_phone,responsible_email,document}",
+	"field": [
+		"responsible_name",
+		"responsible_phone",
+		"responsible_email",
+		"document"
+	]
+}
+Response: 200 0.356 ms 
+
+Request: POST /register/establishments at Sat Jan 06 2024 15:29:01 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"ModelEstablishments": {
+		"profile_photo": "teste",
+		"company_name": "Fanta"
+	},
+	"ModelEstablishmentsInformations": {
+		"registration_type": "fisica",
+		"document": "123456789",
+		"road": "Rua teste",
+		"number": "123",
+		"neighborhood": "bairro teste",
+		"zip_code": "37950000",
+		"city": "Sao Sebastiao do Paraiso",
+		"state": "MG"
+	},
+	"ModelEstablishmentsRegistration": {
+		"telephone_establishment": "35900000000",
+		"email_establishment": "teste@teste.com",
+		"password": "admin",
+		"active": true
+	},
+	"ModelEstablishmentsResponsible": {
+		"responsible_name": "Carlos",
+		"responsible_phone": "35999999999",
+		"responsible_email": "carlos@carlos.com",
+		"document": "3333333333333"
+	}
+}
+Response Body:
+{
+	"success": false,
+	"erro": "{\"name\":\"SequelizeDatabaseError\",\"parent\":{\"code\":\"ER_TRUNCATED_WRONG_VALUE_FOR_FIELD\",\"errno\":1366,\"sqlState\":\"HY000\",\"sqlMessage\":\"Incorrect decimal value: 'Carlos' for column 'responsible_name' at row 1\",\"sql\":\"INSERT INTO `establishments_responsibles` (`id`,`responsible_name`,`responsible_phone`,`responsible_email`,`document`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?,?);\",\"parameters\":[\"92022d2d-2a2c-4920-8c85-7fa2579b2475\",\"Carlos\",\"35999999999\",\"carlos@carlos.com\",\"3333333333333\",\"2024-01-06 18:29:01\",\"2024-01-06 18:29:01\"]},\"original\":{\"code\":\"ER_TRUNCATED_WRONG_VALUE_FOR_FIELD\",\"errno\":1366,\"sqlState\":\"HY000\",\"sqlMessage\":\"Incorrect decimal value: 'Carlos' for column 'responsible_name' at row 1\",\"sql\":\"INSERT INTO `establishments_responsibles` (`id`,`responsible_name`,`responsible_phone`,`responsible_email`,`document`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?,?);\",\"parameters\":[\"
+...
+Response: 200 52.488 ms 
+
+Request: POST /register/establishments at Sat Jan 06 2024 15:29:51 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"ModelEstablishments": {
+		"profile_photo": "teste",
+		"company_name": "Fanta"
+	},
+	"ModelEstablishmentsInformations": {
+		"registration_type": "fisica",
+		"document": 123456789,
+		"road": "Rua teste",
+		"number": 123,
+		"neighborhood": "bairro teste",
+		"zip_code": 37950000,
+		"city": "Sao Sebastiao do Paraiso",
+		"state": "MG"
+	},
+	"ModelEstablishmentsRegistration": {
+		"telephone_establishment": "35900000000",
+		"email_establishment": "teste@teste.com",
+		"password": "admin",
+		"active": true
+	},
+	"ModelEstablishmentsResponsible": {
+		"responsible_name": "Carlos",
+		"responsible_phone": "35999999999",
+		"responsible_email": "carlos@carlos.com",
+		"document": "3333333333333"
+	}
+}
+Response Body:
+{
+	"success": false,
+	"erro": "{\"name\":\"SequelizeDatabaseError\",\"parent\":{\"code\":\"ER_TRUNCATED_WRONG_VALUE_FOR_FIELD\",\"errno\":1366,\"sqlState\":\"HY000\",\"sqlMessage\":\"Incorrect decimal value: 'Carlos' for column 'responsible_name' at row 1\",\"sql\":\"INSERT INTO `establishments_responsibles` (`id`,`responsible_name`,`responsible_phone`,`responsible_email`,`document`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?,?);\",\"parameters\":[\"7aaafb45-d1cd-4c05-8269-59281c899150\",\"Carlos\",\"35999999999\",\"carlos@carlos.com\",\"3333333333333\",\"2024-01-06 18:29:51\",\"2024-01-06 18:29:51\"]},\"original\":{\"code\":\"ER_TRUNCATED_WRONG_VALUE_FOR_FIELD\",\"errno\":1366,\"sqlState\":\"HY000\",\"sqlMessage\":\"Incorrect decimal value: 'Carlos' for column 'responsible_name' at row 1\",\"sql\":\"INSERT INTO `establishments_responsibles` (`id`,`responsible_name`,`responsible_phone`,`responsible_email`,`document`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?,?);\",\"parameters\":[\"
+...
+Response: 200 11.270 ms 
+
+Request: POST /register/establishments at Sat Jan 06 2024 15:30:03 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"ModelEstablishments": {
+		"profile_photo": "teste",
+		"company_name": "Fanta"
+	},
+	"ModelEstablishmentsInformations": {
+		"registration_type": "fisica",
+		"document": 123456789,
+		"road": "Rua teste",
+		"number": 123,
+		"neighborhood": "bairro teste",
+		"zip_code": 37950000,
+		"city": "Sao Sebastiao do Paraiso",
+		"state": "MG"
+	},
+	"ModelEstablishmentsRegistration": {
+		"telephone_establishment": 35900000000,
+		"email_establishment": "teste@teste.com",
+		"password": "admin",
+		"active": true
+	},
+	"ModelEstablishmentsResponsible": {
+		"responsible_name": "Carlos",
+		"responsible_phone": 35999999999,
+		"responsible_email": "carlos@carlos.com",
+		"document": 3333333333333
+	}
+}
+Response Body:
+{
+	"success": false,
+	"erro": "{\"name\":\"SequelizeDatabaseError\",\"parent\":{\"code\":\"ER_TRUNCATED_WRONG_VALUE_FOR_FIELD\",\"errno\":1366,\"sqlState\":\"HY000\",\"sqlMessage\":\"Incorrect decimal value: 'Carlos' for column 'responsible_name' at row 1\",\"sql\":\"INSERT INTO `establishments_responsibles` (`id`,`responsible_name`,`responsible_phone`,`responsible_email`,`document`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?,?);\",\"parameters\":[\"7efeb8f8-aa54-4fef-a63a-e0bd309baa55\",\"Carlos\",35999999999,\"carlos@carlos.com\",3333333333333,\"2024-01-06 18:30:03\",\"2024-01-06 18:30:03\"]},\"original\":{\"code\":\"ER_TRUNCATED_WRONG_VALUE_FOR_FIELD\",\"errno\":1366,\"sqlState\":\"HY000\",\"sqlMessage\":\"Incorrect decimal value: 'Carlos' for column 'responsible_name' at row 1\",\"sql\":\"INSERT INTO `establishments_responsibles` (`id`,`responsible_name`,`responsible_phone`,`responsible_email`,`document`,`createdAt`,`updatedAt`) VALUES (?,?,?,?,?,?,?);\",\"parameters\":[\"7efeb8f8
+...
+Response: 200 7.443 ms 

@@ -1,0 +1,26 @@
+
+Request: POST /auth at Sat Jan 06 2024 15:37:09 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"email": "teste@teste.com",
+	"password": "admin"
+}
+Response Body:
+{
+	"success": false,
+	"erro": "{\"name\":\"SequelizeDatabaseError\",\"parent\":{\"code\":\"ER_BAD_FIELD_ERROR\",\"errno\":1054,\"sqlState\":\"42S22\",\"sqlMessage\":\"Unknown column 'info_user_register.email_establishment' in 'where clause'\",\"sql\":\"SELECT `id`, `email`, `phone`, `password`, `createdAt`, `updatedAt`, `userId` FROM `info_user_registers` AS `info_user_register` WHERE (`info_user_register`.`email_establishment` = 'teste@teste.com');\"},\"original\":{\"code\":\"ER_BAD_FIELD_ERROR\",\"errno\":1054,\"sqlState\":\"42S22\",\"sqlMessage\":\"Unknown column 'info_user_register.email_establishment' in 'where clause'\",\"sql\":\"SELECT `id`, `email`, `phone`, `password`, `createdAt`, `updatedAt`, `userId` FROM `info_user_registers` AS `info_user_register` WHERE (`info_user_register`.`email_establishment` = 'teste@teste.com');\"},\"sql\":\"SELECT `id`, `email`, `phone`, `password`, `createdAt`, `updatedAt`, `userId` FROM `info_user_registers` AS `info_user_register` WHERE (`info_
+...
+Response: 200 14.545 ms 
+
+Request: POST /auth at Sat Jan 06 2024 15:37:17 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"email": "teste@teste.com",
+	"password": "admin"
+}
+Response Body:
+{
+	"success": false,
+	"erro": "{\"name\":\"SequelizeDatabaseError\",\"parent\":{\"code\":\"ER_BAD_FIELD_ERROR\",\"errno\":1054,\"sqlState\":\"42S22\",\"sqlMessage\":\"Unknown column 'info_user_register.email_establishment' in 'where clause'\",\"sql\":\"SELECT `id`, `email`, `phone`, `password`, `createdAt`, `updatedAt`, `userId` FROM `info_user_registers` AS `info_user_register` WHERE (`info_user_register`.`email_establishment` = 'teste@teste.com');\"},\"original\":{\"code\":\"ER_BAD_FIELD_ERROR\",\"errno\":1054,\"sqlState\":\"42S22\",\"sqlMessage\":\"Unknown column 'info_user_register.email_establishment' in 'where clause'\",\"sql\":\"SELECT `id`, `email`, `phone`, `password`, `createdAt`, `updatedAt`, `userId` FROM `info_user_registers` AS `info_user_register` WHERE (`info_user_register`.`email_establishment` = 'teste@teste.com');\"},\"sql\":\"SELECT `id`, `email`, `phone`, `password`, `createdAt`, `updatedAt`, `userId` FROM `info_user_registers` AS `info_user_register` WHERE (`info_
+...
+Response: 200 3.416 ms 

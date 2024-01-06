@@ -1,0 +1,76 @@
+
+Request: POST /auth at Sat Jan 06 2024 15:39:34 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"email": "teste@teste.com",
+	"password": "admin"
+}
+Response Body:
+{
+	"success": true,
+	"data": {
+		"usuarioId": "40e47db5-1bd5-4761-92d0-482d52bb699f",
+		"email": "teste@teste.com",
+		"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQwZTQ3ZGI1LTFiZDUtNDc2MS05MmQwLTQ4MmQ1MmJiNjk5ZiIsImlhdCI6MTcwNDU2NjM3NCwiZXhwIjoxNzA0NTY5MjU0fQ.70vMPQhI-L0g_nv0u1c5DRjovx4TLRC0muS26LF39LA",
+		"start": "2024-01-06T15:39:34-03:00",
+		"end": "2024-02-08T23:39:34-03:00"
+	}
+}
+Response: 200 66.097 ms 
+
+Request: POST /auth at Sat Jan 06 2024 15:39:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"email": "teste@teste.com",
+	"password": "admin"
+}
+Response Body:
+{
+	"success": true,
+	"data": {
+		"usuarioId": "40e47db5-1bd5-4761-92d0-482d52bb699f",
+		"email": "teste@teste.com",
+		"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQwZTQ3ZGI1LTFiZDUtNDc2MS05MmQwLTQ4MmQ1MmJiNjk5ZiIsImlhdCI6MTcwNDU2NjM3NSwiZXhwIjoxNzA0NTY5MjU1fQ.5ZW99uVV0k9AWTWCOTQN8X1VBkSL_0NHx7UlPMp3EKA",
+		"start": "2024-01-06T15:39:35-03:00",
+		"end": "2024-02-08T23:39:35-03:00"
+	}
+}
+Response: 200 28.592 ms 
+
+Request: POST /auth at Sat Jan 06 2024 15:39:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"email": "teste@teste.com",
+	"password": "admin"
+}
+Response Body:
+{
+	"success": true,
+	"data": {
+		"usuarioId": "40e47db5-1bd5-4761-92d0-482d52bb699f",
+		"email": "teste@teste.com",
+		"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQwZTQ3ZGI1LTFiZDUtNDc2MS05MmQwLTQ4MmQ1MmJiNjk5ZiIsImlhdCI6MTcwNDU2NjM3NSwiZXhwIjoxNzA0NTY5MjU1fQ.5ZW99uVV0k9AWTWCOTQN8X1VBkSL_0NHx7UlPMp3EKA",
+		"start": "2024-01-06T15:39:35-03:00",
+		"end": "2024-02-08T23:39:35-03:00"
+	}
+}
+Response: 200 26.071 ms 
+
+Request: POST /auth at Sat Jan 06 2024 15:39:35 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"email": "teste@teste.com",
+	"password": "admin"
+}
+Response Body:
+{
+	"success": true,
+	"data": {
+		"usuarioId": "40e47db5-1bd5-4761-92d0-482d52bb699f",
+		"email": "teste@teste.com",
+		"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQwZTQ3ZGI1LTFiZDUtNDc2MS05MmQwLTQ4MmQ1MmJiNjk5ZiIsImlhdCI6MTcwNDU2NjM3NSwiZXhwIjoxNzA0NTY5MjU1fQ.5ZW99uVV0k9AWTWCOTQN8X1VBkSL_0NHx7UlPMp3EKA",
+		"start": "2024-01-06T15:39:35-03:00",
+		"end": "2024-02-08T23:39:35-03:00"
+	}
+}
+Response: 200 26.450 ms 

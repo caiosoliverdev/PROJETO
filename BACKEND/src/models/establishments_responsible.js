@@ -6,7 +6,7 @@ module.exports = establishments_responsible =  {
         primaryKey: true
     },
     responsible_name: {
-        type: Sequelize.DECIMAL,
+        type: Sequelize.STRING,
         allowNull: false
     },
     responsible_phone: {

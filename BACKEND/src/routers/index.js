@@ -1,5 +1,5 @@
 const express = require('express');
-const { verifyJWT, verifyParams } = require('../auth');
+const { verifyJWT } = require('../auth');
 const routes = express.Router();
 
 //#region Establishments Controllers
@@ -25,8 +25,9 @@ const Info_user_registerController = require('../controllers/userController/info
 const Log_login_userController = require('../controllers/userController/log_login_user');
 //#endregion
 
-//#region Register Controllers
+//#region Register/Login Controllers
 const EstablishmentsRegisterController = require('../controllers/registerController/establishments_register');
+const LoginController = require('../controllers/loginController/loginController');
 //#endregion
 
 //#region Establishments 
@@ -200,8 +201,11 @@ routes.put('/Log_login_user/:id?', verifyJWT, Log_login_userController.Put);
 routes.delete('/Log_login_user/:id', verifyJWT, Log_login_userController.Delete);
 //#endregion 
 
-//#region Register
-routes.post('/register/establishments', verifyParams, EstablishmentsRegisterController.Post);
+//#region Register/Login
+routes.post('/register/establishments', EstablishmentsRegisterController.Post);
+
+routes.post('/auth', LoginController.Login);
+
 //#endregion
 
 module.exports = routes;

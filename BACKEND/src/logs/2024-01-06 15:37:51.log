@@ -1,0 +1,19 @@
+
+Request: POST /auth at Sat Jan 06 2024 15:37:53 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"email": "teste@teste.com",
+	"password": "admin"
+}
+Response Body:
+{
+	"success": true,
+	"data": {
+		"usuarioId": "40e47db5-1bd5-4761-92d0-482d52bb699f",
+		"email": "teste@teste.com",
+		"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQwZTQ3ZGI1LTFiZDUtNDc2MS05MmQwLTQ4MmQ1MmJiNjk5ZiIsImlhdCI6MTcwNDU2NjI3MywiZXhwIjoxNzA0NTY5MTUzfQ.sQ02GdR5akhXf99MLrI4LWFd25lzakLIv81LXwHXKts",
+		"start": "2024-01-06T15:37:53-03:00",
+		"end": "2024-02-08T23:37:53-03:00"
+	}
+}
+Response: 200 59.112 ms 

@@ -1,0 +1,82 @@
+
+Request: POST /register/establishments at Sat Jan 06 2024 15:34:30 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"ModelEstablishments": {
+		"profile_photo": "teste",
+		"company_name": "Fanta"
+	},
+	"ModelEstablishmentsInformations": {
+		"registration_type": "fisica",
+		"document": 123456789,
+		"road": "Rua teste",
+		"number": 123,
+		"neighborhood": "bairro teste",
+		"zip_code": 37950000,
+		"city": "Sao Sebastiao do Paraiso",
+		"state": "MG"
+	},
+	"ModelEstablishmentsRegistration": {
+		"telephone_establishment": 333,
+		"email_establishment": "teste@teste.com",
+		"password": "admin",
+		"active": true
+	},
+	"ModelEstablishmentsResponsible": {
+		"responsible_name": "Carlos",
+		"responsible_phone": 33,
+		"responsible_email": "carlos@carlos.com",
+		"document": 333
+	}
+}
+Response Body:
+{
+	"success": true,
+	"data": {
+		"id": "05d784c3-f7ae-4535-a268-7bec5175c299",
+		"profile_photo": "teste",
+		"company_name": "Fanta",
+		"updatedAt": "2024-01-06T18:34:30.178Z",
+		"createdAt": "2024-01-06T18:34:30.178Z"
+	}
+}
+Response: 200 52.759 ms 
+
+Request: POST /auth at Sat Jan 06 2024 15:34:59 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"email": "teste@teste.com",
+	"password": ""
+}
+Response Body:
+{
+	"success": false,
+	"erro": "Esse email não esta cadastrado"
+}
+Response: 200 5.930 ms 
+
+Request: POST /auth at Sat Jan 06 2024 15:35:00 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"email": "teste@teste.com",
+	"password": ""
+}
+Response Body:
+{
+	"success": false,
+	"erro": "Esse email não esta cadastrado"
+}
+Response: 200 1.457 ms 
+
+Request: POST /auth at Sat Jan 06 2024 15:35:22 GMT-0300, IP: ::ffff:127.0.0.1, User Agent: Thunder Client (https://www.thunderclient.com)
+Request Body:
+{
+	"email": "teste@teste.com",
+	"password": "admin"
+}
+Response Body:
+{
+	"success": false,
+	"erro": "Esse email não esta cadastrado"
+}
+Response: 200 4.189 ms 
